@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication6.Entity;
+using WebApplication6.Control;
 
 namespace WebApplication6
 {
@@ -14,16 +15,23 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           /// string a = Request.Form["fname"];
+          ///  Response.Write(a);
            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            if (pwd.Value == "shazad" && user.Value == "shazad") {
-                FormsAuthentication.SetAuthCookie(user.Value, false);
-               Response.Redirect(FormsAuthentication.GetRedirectUrl(user.Value, false));
-              
+            VerifyUser check = new VerifyUser();
+            int id = check.validateUser(user.Value, pwd.Value);
+            if (id != 0) {
+                Session["user"] = id; 
+                Response.Redirect(FormsAuthentication.GetRedirectUrl(user.Value, false));
+            }
+            else
+            {
+                
+                Response.Write("<script>alert('Incorrect Username or Password')</script>");
             }
         }
     }

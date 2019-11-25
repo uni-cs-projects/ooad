@@ -170,6 +170,7 @@
     <Content Include="login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="connect.cs" />
     <Compile Include="Control\AddUser.cs" />
     <Compile Include="Control\editTeams.cs" />
     <Compile Include="Control\GanerateAnnoucements.cs" />

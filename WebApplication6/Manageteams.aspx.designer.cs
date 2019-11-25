@@ -13,66 +13,111 @@ namespace WebApplication6 {
     public partial class WebForm6 {
         
         /// <summary>
-        /// tem3 control.
+        /// p0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow tem3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p0;
         
         /// <summary>
-        /// tem2 control.
+        /// p1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow tem2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p1;
         
         /// <summary>
-        /// oko control.
+        /// p2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl oko;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p2;
         
         /// <summary>
-        /// haha control.
+        /// p3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl haha;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p3;
         
         /// <summary>
-        /// tem control.
+        /// p4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow tem;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p4;
         
         /// <summary>
-        /// tem1 control.
+        /// p5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow tem1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p5;
         
         /// <summary>
-        /// Td1 control.
+        /// p6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableCell Td1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p6;
+        
+        /// <summary>
+        /// p7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p7;
+        
+        /// <summary>
+        /// p8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p8;
+        
+        /// <summary>
+        /// p9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p9;
+        
+        /// <summary>
+        /// p10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText p10;
+        
+        /// <summary>
+        /// teams control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl teams;
     }
 }

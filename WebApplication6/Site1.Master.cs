@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -12,6 +13,7 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 
@@ -43,15 +45,20 @@ namespace WebApplication6
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             if (email.Value == "shazad" && pwd.Value == "shazad")
             {
                 FormsAuthentication.SetAuthCookie(email.Value, true);
                 Response.Redirect(Request.Url.ToString());
+
+                
+
             }
             else {
                 Response.Write(@"<script>alert(""wrong credentials"")</script>");
-                
+              
             }
         }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication6.Control;
 
 namespace WebApplication6
 {
@@ -16,6 +17,17 @@ namespace WebApplication6
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            AddUser a = new AddUser();
+            if (a.adder(usrname.Value, pwd.Value, email.Value))
+            {
+                Response.Write("<script>alert('Registered Successfully')</script>");
+                Response.Redirect("login.aspx");
+            }
+               else
+	        {
+                Response.Write("<script>alert('Email Already Exist')</script>");
+            }
+            
             
         }
     }

@@ -49,25 +49,8 @@
                     <th scope="col">Players</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">1</th>
-                    <td>Not My League1</td>
-                    <td>Pakvistan vs Srilanka</td>
-                    <td>12345</td>
-                </tr>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">2</th>
-                    <td>Not My League2</td>
-                    <td>India vs South Africa</td>
-                    <td>12345</td>
-                </tr>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">3</th>
-                    <td>Not My League3</td>
-                    <td>Pakistan Super League</td>
-                    <td>12345</td>
-                </tr>
+            <tbody runat="server" id="leagues">
+                
             </tbody>
         </table>
     </div>

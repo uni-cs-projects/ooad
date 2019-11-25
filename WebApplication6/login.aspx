@@ -64,7 +64,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <input type="text" id="user" runat="server" class="form-control" name="username" placeholder="Username" required="required">
+                    <input type="text" id="user" runat="server" class="form-control" name="username" placeholder="Email" required="required">
                 </div>
             </div>
             <div class="form-group">
@@ -82,6 +82,14 @@
                 <a href="#" class="pull-right text-success">Forgot Password?</a>
             </div>
         </form>
+         <!-- without runat keyword getting data
+        <form method="post" action="Default.aspx">
+
+            <input name="fname" type="text" value="" />
+            <input name="submit" type="submit" value="send" />
+
+        </form>
+             -->
         <div class="hint-text small">Don't have an account? <a href="register.aspx" class="text-success">Register Now!</a></div>
     </div>
 
