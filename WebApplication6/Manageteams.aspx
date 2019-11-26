@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Manageteams.aspx.cs" Inherits="WebApplication6.WebForm6" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Manageteams.aspx.cs" Inherits="WebApplication6.WebForm6" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,6 +19,7 @@
         <input type="text" id="p9" runat="server" hidden="hidden"/>
         <input type="text" onchange="ab()" name="valid" id="p10" runat="server" hidden="hidden"/>
     </form>
+    <form runat="server"  EnableViewState="true">
     <div class="container" style="display: inline-block;">
         <div class="row" style="padding-top: 10px;">
             <div class="col-md-1"></div>
@@ -26,24 +27,18 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col" id="oko"></th>
+
                         <th scope="col">
-                            <select class="custom-select custom-select-sm">
-                                <option selected>Skills</option>
-                                <option value="all">All</option>
-                                <option value="batsmen">Batsmen</option>
-                                <option value="bowler">Bowler</option>
-                                <option value="allrounder">All Rounder</option>
-                                <option value="wicketkeeper">Wicket Keeper</option>
-                            </select>
+                        
+                     <asp:DropDownList ID="DropDownList2" runat="server" class="custom-select custom-select-sm"></asp:DropDownList>
 
                         </th>
                         <th scope="col">
-                            <select class="custom-select custom-select-sm">
-                                <option selected>Country</option>
-                                <option value="all">All</option>
-                                <option value="1">Pakistan</option>
-                                <option value="2">Sirilanka</option>
-                            </select>
+                        
+         <asp:DropDownList ID="DropDownList1" runat="server" ViewStateMode="Enabled" EnableViewState="true"  class="custom-select custom-select-sm" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" OnTextChanged="DropDownList1_TextChanged">
+
+         </asp:DropDownList>
+                    
                         </th>
                         <th scope="col"></th>
                     </tr>
@@ -74,6 +69,7 @@
             </table>
         </div>
     </div>
+        </form>
 
     <script>
         var ok = 0;

@@ -12,6 +12,6 @@ namespace WebApplication6.Control
 
         public void deleteLeague() { }
 
-        public bool leagueAvailable() { }
+        //public bool leagueAvailable() { }
     }
 }

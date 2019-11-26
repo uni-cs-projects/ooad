@@ -31,34 +31,24 @@ namespace WebApplication6
                     </div>
                 </li>
             </ul>";
-                Literal1.Visible = true;
+             
               
             }
             else
             {
-                frm1.Visible = true;
+                Literal1.Text = @"<form id=""frm1"" class=""form-inline""  method=""post"" name=""frms"" action=""Default.aspx"" visible=""false"">
+    <input id=""email"" class=""form-control mr-sm-2 my-1 form-control-sm"" name=""usr"" type=""text"" placeholder=""Email""/>
+                <input id=""pwd"" name=""usr1"" class=""form-control mr-sm-2 my-1 form-control-sm"" type=""password"" placeholder=""Password""/>
+                <input class=""btn btn-outline-light my-2 my-sm-0 btn-sm"" type=""submit"" value=""Log In"" /> &nbsp;
+                <a href = ""register.aspx"" class=""btn btn-outline-light my-2 my-sm-0 btn-sm"" role=""button"">Register</a>
+                </form>";
                 
             }
            
             
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
-            if (email.Value == "shazad" && pwd.Value == "shazad")
-            {
-                FormsAuthentication.SetAuthCookie(email.Value, true);
-                Response.Redirect(Request.Url.ToString());
-
-                
-
-            }
-            else {
-                Response.Write(@"<script>alert(""wrong credentials"")</script>");
-              
-            }
-        }
+  
 
     }
 }
