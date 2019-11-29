@@ -25,8 +25,8 @@ namespace WebApplication6
             VerifyUser check = new VerifyUser();
             int id = check.validateUser(user.Value, pwd.Value);
             if (id != 0) {
-                Session["user"] = id; 
-                Response.Redirect(FormsAuthentication.GetRedirectUrl(user.Value, false));
+                Session["id"] = id;
+                Response.Redirect(FormsAuthentication.GetRedirectUrl(user.Value,false));
             }
             else
             {

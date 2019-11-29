@@ -22,5 +22,7 @@ namespace WebApplication6.Entity
             read.Close();
             return teams;
         }
+
+        
     }
 }

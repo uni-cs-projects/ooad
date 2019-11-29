@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-     <form id="save-players" method="post" name='forms' action="Leaderboard.aspx">
+     <form id="save-players" method="post" name='forms' action="Teamadder.aspx">
 
          <input type="submit" id="check" value="submit" class="btn btn-success btn-block login-btn"/>
            
@@ -78,16 +78,16 @@
            
             ok++;
             if (ok > 11) {
-                document.getElementById("check").hidden = false;
+                document.getElementById("check").disabled = false;
                 if (ok >= 13) { ok = 12;}
             }
             else {
-                document.getElementById("check").hidden = true;
+                document.getElementById("check").disabled = true;
             }
         }
         function ab2() {
             ok--;
-            document.getElementById("check").hidden = true;
+            document.getElementById("check").disabled = true;
         }
         ab()
       

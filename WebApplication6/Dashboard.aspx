@@ -16,28 +16,12 @@
                     <th scope="col">Players</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">1</th>
-                    <td>My League1</td>
-                    <td>Pakvistan vs Srilanka</td>
-                    <td>12345</td>
-                </tr>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">2</th>
-                    <td>My League2</td>
-                    <td>India vs South Africa</td>
-                    <td>12345</td>
-                </tr>
-                <tr class="click-row" data-href="#">
-                    <th scope="row">3</th>
-                    <td>My League3</td>
-                    <td>Pakistan Super League</td>
-                    <td>12345</td>
-                </tr>
+            <tbody id="leagCreate" runat="server">
+               
             </tbody>
         </table>
         <h3 class="h33">Participating</h3>
+            
         
         <asp:Button ID="Button1" runat="server" Text="Join Leagues" class="btn btn-primary btn-right" OnClick="Button1_Click" /></form>
         <table class="table table-hover">
@@ -49,7 +33,7 @@
                     <th scope="col">Players</th>
                 </tr>
             </thead>
-            <tbody runat="server" id="leagues">
+            <tbody runat="server" id="leaguesP">
                 
             </tbody>
         </table>

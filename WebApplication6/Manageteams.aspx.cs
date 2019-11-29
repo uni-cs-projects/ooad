@@ -15,6 +15,7 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["lid"] = Request.QueryString["lid"];
             SearchTeam a = new SearchTeam();
             
             foreach (var item in a.getTeams())

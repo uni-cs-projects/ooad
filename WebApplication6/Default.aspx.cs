@@ -23,7 +23,8 @@ namespace WebApplication6
                 }
                 else
                 {
-                    Response.Redirect(Request.Url.ToString());
+                    HttpCookie user = new HttpCookie("user");
+                    Session["id"] = id;
                 }
             }
             

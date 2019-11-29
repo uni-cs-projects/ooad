@@ -13,7 +13,7 @@ namespace WebApplication6.Control
             Users check = new Users();
             if (check.checkUser(_eml,_pwd))
             {
-                FormsAuthentication.SetAuthCookie(check.name, false);
+                FormsAuthentication.SetAuthCookie(check.name,false);
                 return check.Userid;
             }
             return 0;

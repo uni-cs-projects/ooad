@@ -11,12 +11,7 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string a = "";
-            foreach (string key in Request.Form.AllKeys)
-            {
-                a += Request.Form[key];
-            }
-            Response.Write(a);
+  
         }
     }
 }

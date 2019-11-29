@@ -13,24 +13,34 @@ namespace WebApplication6.Entity
         public string LeagueName { get; set; }
         public string startDate { get; set; }
         public string endDate { get; set; }
+        public int userid { get; set; }
 
         public Leagues() {
 
         }
-        public Leagues(string _torname,string _lename,string _strdate,string enddate)
+        public Leagues(int torid,string _lename,DateTime _strdate,DateTime enddate,int userid)
         {
-            string x = $"insert into League values('{_torname}','{_lename}','{_strdate}','{enddate}')";
+            string x = $"insert into League values({torid},'{_lename}','{_strdate}','{enddate}',{userid})";
             SqlCommand a = new SqlCommand(x, connect.get());
             a.ExecuteNonQuery();
         }
 
         public List<Leagues> showLeagues() {
-            SqlCommand com = new SqlCommand("select a.LeagueName,b.TournamentName from League a,Tournament b where a.TournamentID = b.TournamentID", connect.get());
+            string x = "";
+            if (userid == 0)
+            {
+                x = "select a.LeagueName,b.TournamentName,a.LeagueID from League a,Tournament b where a.TournamentID = b.TournamentID";
+            }
+            else
+            {
+                x = $"select a.LeagueName,b.TournamentName,a.LeagueID from League a,Tournament b where a.TournamentID = b.TournamentID and Userid = {userid}";
+            }
+            SqlCommand com = new SqlCommand(x, connect.get());
             SqlDataReader read = com.ExecuteReader();
             List<Leagues> list = new List<Leagues>();
             while (read.Read())
             {
-                list.Add(new Leagues() { LeagueName=read[0].ToString(),Tourname=read[1].ToString()});
+                list.Add(new Leagues() { LeagueName=read[0].ToString(),Tourname=read[1].ToString(),LeagueID=Convert.ToInt32(read[2])});
             }
             read.Close();
             return list;

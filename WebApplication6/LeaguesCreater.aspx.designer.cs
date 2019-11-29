@@ -10,25 +10,43 @@
 namespace WebApplication6 {
     
     
-    public partial class WebForm2 {
+    public partial class WebForm11 {
         
         /// <summary>
-        /// Button2 control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// leagCreate control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl leagCreate;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        
+        /// <summary>
+        /// Calendar2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calendar2;
+        
+        /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
         /// Button1 control.
@@ -38,14 +56,5 @@ namespace WebApplication6 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
-        /// <summary>
-        /// leaguesP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl leaguesP;
     }
 }

@@ -147,6 +147,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="logout.aspx" />
+    <Content Include="LeaguesCreater.aspx" />
+    <Content Include="Teamadder.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -192,6 +194,7 @@
     <Compile Include="Entity\Players.cs" />
     <Compile Include="Entity\Points.cs" />
     <Compile Include="Entity\Teams.cs" />
+    <Compile Include="Entity\Tounaments.cs" />
     <Compile Include="Entity\Users.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -273,6 +276,20 @@
     </Compile>
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaguesCreater.aspx.cs">
+      <DependentUpon>LeaguesCreater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaguesCreater.aspx.designer.cs">
+      <DependentUpon>LeaguesCreater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teamadder.aspx.cs">
+      <DependentUpon>Teamadder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teamadder.aspx.designer.cs">
+      <DependentUpon>Teamadder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
