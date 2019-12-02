@@ -3,23 +3,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-     <form id="save-players" method="post" name='forms' action="Teamadder.aspx">
+     <form id="save-players" method="post" name='forms' action="Teamadder.aspx" hidden>
 
-         <input type="submit" id="check" value="submit" class="btn btn-success btn-block login-btn"/>
+         <input type="submit" id="check" value="submit" hidden="hidden" class="btn btn-success btn-block login-btn"/>
            
-        <input type="text" id="p0" runat="server" hidden="hidden"/>
-        <input type="text" id="p1" runat="server" hidden="hidden"/>
-        <input type="text" id="p2" runat="server" hidden="hidden"/>
-        <input type="text" id="p3" runat="server" hidden="hidden"/>
-        <input type="text" id="p4" runat="server" hidden="hidden"/>
-        <input type="text" id="p5" runat="server" hidden="hidden"/>
-        <input type="text" id="p6" runat="server" hidden="hidden"/>
-        <input type="text" id="p7" runat="server" hidden="hidden"/>
-        <input type="text" id="p8" runat="server" hidden="hidden"/>
-        <input type="text" id="p9" runat="server" hidden="hidden"/>
-        <input type="text" onchange="ab()" name="valid" id="p10" runat="server" hidden="hidden"/>
+        <input type="text" id="p0" runat="server" />
+        <input type="text" id="p1" runat="server" />
+        <input type="text" id="p2" runat="server" />
+        <input type="text" id="p3" runat="server" />
+        <input type="text" id="p4" runat="server" />
+        <input type="text" id="p5" runat="server" />
+        <input type="text" id="p6" runat="server" />
+        <input type="text" id="p7" runat="server" />
+        <input type="text" id="p8" runat="server" />
+        <input type="text" id="p9" runat="server" />
+        <input type="text"  id="p10" runat="server"/>
     </form>
-    <form runat="server"  EnableViewState="true">
+
     <div class="container" style="display: inline-block;">
         <div class="row" style="padding-top: 10px;">
             <div class="col-md-1"></div>
@@ -30,20 +30,32 @@
 
                         <th scope="col">
                         
-                     <asp:DropDownList ID="DropDownList2" runat="server" class="custom-select custom-select-sm"></asp:DropDownList>
+                     <select class="custom-select custom-select-sm">
+                                <option selected>Skills</option>
+                                <option value="all">All</option>
+                                <option value="batsmen">Batsmen</option>
+                                <option value="bowler">Bowler</option>
+                                <option value="allrounder">All Rounder</option>
+                                <option value="wicketkeeper">Wicket Keeper</option>
+                            </select>
 
                         </th>
                         <th scope="col">
                         
-         <asp:DropDownList ID="DropDownList1" runat="server" ViewStateMode="Enabled" EnableViewState="true"  class="custom-select custom-select-sm" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" OnTextChanged="DropDownList1_TextChanged">
+         <select class="custom-select custom-select-sm">
+                                <option selected>Country</option>
+                                <option value="all">All</option>
+                                <option value="1">Pakistan</option>
+                                <option value="2">Sirilanka</option>
+                            </select>
 
-         </asp:DropDownList>
+
                     
                         </th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody id="teams" runat="server" onclick="ab()">
+                <tbody id="teams" runat="server">
              
                 </tbody>
             </table>
@@ -61,37 +73,22 @@
                         <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody onclick="ab2()">
+                <tbody >
 
                     
 
                 </tbody>
             </table>
+            <div class="col-md-1">
+                <div class="col-md-2">
+                    <button type="button" id="save-team" class="btn btn-primary btn-lg" onclick="ab()" disabled>Save</button>
+                </div>
+            </div>
         </div>
     </div>
-        </form>
+   
 
-    <script>
-        var ok = 0;
-        function ab() {
-            
-           
-            ok++;
-            if (ok > 11) {
-                document.getElementById("check").disabled = false;
-                if (ok >= 13) { ok = 12;}
-            }
-            else {
-                document.getElementById("check").disabled = true;
-            }
-        }
-        function ab2() {
-            ok--;
-            document.getElementById("check").disabled = true;
-        }
-        ab()
-      
-    </script>
+    
     <p></p>
     <p></p>
     <p></p>

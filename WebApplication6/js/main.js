@@ -22,24 +22,22 @@ var maintainNumbering = (function (tableId) {
 
 $('#select-players tbody').on('click', 'tr', function (e) {
     if (count < 11) {
-	
         $(this).find('i:first').removeClass('fa-plus-square');
         $(this).find('i:first').addClass('fa-minus-square');
         
-        //addPlayerinform(this);
-	var a = $(this).find('th:first').attr('id');
-	console.log(a);
-	document.querySelector('#ContentPlaceHolder1_p'+count).value = a;
+        addPlayerinform(this);
+
         var row = $(this).closest('tr').html();
         $('#my-team tbody').append('<tr>' + row + '</tr>');
         $(this).closest('tr').remove();
         count++;
-        
+        if(count == 11){
+            document.querySelector('#save-team').disabled = false;
+        }
         maintainNumbering('#select-players');
     }
     else {
         alert('Your team is full.');
-	
     }
 });
 
@@ -53,6 +51,7 @@ $('#my-team tbody').on('click', 'tr', function (e) {
     $(this).closest('tr').remove();
     maintainNumbering('#my-team');
     count--;
+    document.querySelector('#save-team').disabled = true;
 });
 
 function checkPlayer(id) {
@@ -80,3 +79,13 @@ function checkPlayer(id) {
 
 }
 
+function addPlayerinform(that){
+    var a = $(that).find('th:first').attr('id');
+    document.querySelector('#ContentPlaceHolder1_p'+count).value = a;
+}
+
+function ab(){
+var a = document.getElementById('check');
+a.click();
+
+}

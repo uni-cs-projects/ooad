@@ -14,6 +14,7 @@ namespace WebApplication6.Entity
         public string TypeName { get; set; }
         public int playerType { get; set; }
         public object SqlComman { get; private set; }
+        public string playerhand { get; set; }
 
         public List<Players> getPlayers() {
             string x = "";
@@ -38,7 +39,7 @@ namespace WebApplication6.Entity
             SqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
-                list.Add(new Players() { playerid = Convert.ToInt32(reader[0]),Teamid=Convert.ToInt32(reader[1]),playerName=reader[2].ToString(),playerType=Convert.ToInt32(reader[3]) });
+                list.Add(new Players() { playerid = Convert.ToInt32(reader[0]),Teamid=Convert.ToInt32(reader[1]),playerName=reader[2].ToString(),playerType=Convert.ToInt32(reader[3]),playerhand=reader[4].ToString() });
             }
             reader.Close();
             return list;
