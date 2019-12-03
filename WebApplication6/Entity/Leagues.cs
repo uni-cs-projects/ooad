@@ -14,6 +14,7 @@ namespace WebApplication6.Entity
         public string startDate { get; set; }
         public string endDate { get; set; }
         public int userid { get; set; }
+        public int sum { get; set; }
 
         public Leagues() {
 
@@ -60,6 +61,8 @@ namespace WebApplication6.Entity
             return list;
 
         }
+
+
 
         }
 }

@@ -47,6 +47,7 @@
                    <li class="nav-item">
                     <a class="nav-link" href="Announce.aspx">Annoucements</a>
                 </li>
+    <asp:Literal ID="Literal2" runat="server" Visible="false"></asp:Literal>
              
 
             </ul>

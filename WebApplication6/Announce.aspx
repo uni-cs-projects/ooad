@@ -4,12 +4,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container">
-        <h1 style="text-align: center;">Leaderboard</h1>
+        <h1 style="text-align: center;">Annoucements</h1>
+            <div class="login-form">
         <form runat="server" id="form">
+            <h2 class="text-center">Make Announcements</h2>
+           
         <asp:dropdownlist class="custom-select custom-select-sm" id="dl" runat="server"></asp:dropdownlist>
-        <asp:textbox id="tx" runat="server"></asp:textbox>
+         <p></p>        
+        <asp:textbox id="tx" runat="server" class="form-control" placeholder="Enter Your Message" required="required"></asp:textbox>
+           <p></p>  
         <asp:button runat="server" text="Make Announcements" class="btn btn-primary btn-lg" OnClick="Unnamed1_Click" />
+                          
         </form>
+              </div>
         <table class="table table-striped">
 
             <thead>

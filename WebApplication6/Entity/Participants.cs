@@ -11,7 +11,8 @@ namespace WebApplication6.Entity
         public int userid { get; set; }
         public int Teamid { get; set; }
         public int Leagueid { get; set; }
-       
+        public int TotalPoints { get; set; }
+
 
         public void addPartiTeam(int Userid, int LeagueID, string TeamName)
         {
@@ -41,15 +42,19 @@ namespace WebApplication6.Entity
             }
 
         public List<Leagues> getJoinLeagues() {
-            string x = $"select a.LeagueName,c.TournamentName from League a,UserTeam b,Tournament c where b.LeagueID = a.LeagueID and a.TournamentID = c.TournamentID and b.UserID ={userid}";
+            string x = $"select a.LeagueName,c.TournamentName,a.LeagueID from League a,UserTeam b,Tournament c where b.LeagueID = a.LeagueID and a.TournamentID = c.TournamentID and b.UserID ={userid}";
             List<Leagues> list = new List<Leagues>();
             SqlCommand a = new SqlCommand(x, connect.get());
             SqlDataReader reader = a.ExecuteReader();
             while (reader.Read())
             {
-                list.Add(new Leagues() {LeagueName = reader[0].ToString(),Tourname=reader[1].ToString() });
+                list.Add(new Leagues() { LeagueName = reader[0].ToString(), Tourname = reader[1].ToString(), sum = Convert.ToInt32(reader[2]) });
             }
             reader.Close();
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].sum = new Points().totalPoints(userid, list[i].sum);
+            }
             return list;
         }
         }

@@ -9,13 +9,14 @@ namespace WebApplication6.Control
     public class LeaguesManager
     {
 
-        public void createLeague(int _tid,string leagueName,string sdate,string edate,int userid) {
-            new Leagues(_tid,leagueName,sdate,edate,userid);
-            
+        public void createLeague(int _tid, string leagueName, string sdate, string edate, int userid)
+        {
+            new Leagues(_tid, leagueName, sdate, edate, userid);
+
         }
 
-        public void deleteLeague() { }
 
-   
     }
+
+  
 }

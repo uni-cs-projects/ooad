@@ -13,6 +13,14 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (HttpContext.Current.User.Identity.Name.ToString() == "shazad")
+            {
+                Literal2.Text = @"</li>
+                   <li class=""nav-item"">
+                      <a class=""nav-link"" href=""addPoints.aspx"">Add Points</a>
+                </li>";
+                Literal2.Visible = true;
+            }
           
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {

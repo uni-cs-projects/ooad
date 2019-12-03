@@ -150,6 +150,7 @@
     <Content Include="LeaguesCreater.aspx" />
     <Content Include="Teamadder.aspx" />
     <Content Include="Announce.aspx" />
+    <Content Include="addPoints.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -298,6 +299,13 @@
     </Compile>
     <Compile Include="Announce.aspx.designer.cs">
       <DependentUpon>Announce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addPoints.aspx.cs">
+      <DependentUpon>addPoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addPoints.aspx.designer.cs">
+      <DependentUpon>addPoints.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
