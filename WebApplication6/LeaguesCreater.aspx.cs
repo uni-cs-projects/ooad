@@ -14,16 +14,20 @@ namespace WebApplication6
         protected void Page_Load(object sender, EventArgs e)
         {
             //Response.Write(Request.Cookies["id"].Value);
-            foreach (var item in new Tounaments().get())
+            if (!Page.IsPostBack)
             {
-                DropDownList1.Items.Add(new ListItem(item.tourname,item.TourID.ToString()));
+
+
+                foreach (var item in new Tounaments().get())
+                {
+                    DropDownList2.Items.Add(new ListItem(item.tourname, item.TourID.ToString()));
+                }
             }
-           
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            new LeaguesManager().createLeague(Convert.ToInt32(DropDownList1.SelectedValue), TextBox1.Text, Calendar1.SelectedDate, Calendar2.SelectedDate, Convert.ToInt32(Session["id"]));
+            new LeaguesManager().createLeague(Convert.ToInt32(DropDownList2.SelectedValue),leaguename.Value,startdate.Value, enddate.Value, Convert.ToInt32(Session["id"]));
             Response.Write("<script>alert('League Creation Successfull')</script>");
         }
     }

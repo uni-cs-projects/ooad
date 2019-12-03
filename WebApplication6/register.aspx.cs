@@ -17,6 +17,10 @@ namespace WebApplication6
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            if (pwd != rpwd)
+            {
+                Response.Write("<script>alert('password mismatched')</script>");
+            }
             AddUser a = new AddUser();
             if (a.adder(usrname.Value, pwd.Value, email.Value))
             {

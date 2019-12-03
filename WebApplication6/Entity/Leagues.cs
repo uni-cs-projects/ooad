@@ -18,7 +18,7 @@ namespace WebApplication6.Entity
         public Leagues() {
 
         }
-        public Leagues(int torid,string _lename,DateTime _strdate,DateTime enddate,int userid)
+        public Leagues(int torid,string _lename,string _strdate,string enddate,int userid)
         {
             string x = $"insert into League values({torid},'{_lename}','{_strdate}','{enddate}',{userid})";
             SqlCommand a = new SqlCommand(x, connect.get());
@@ -45,5 +45,21 @@ namespace WebApplication6.Entity
             read.Close();
             return list;
         }
-    }
+
+        public List<Leagues> showadminLeagues(int uid)
+        {
+            string x = $"select LeagueID,LeagueName from League where userid={uid}";
+            SqlCommand com = new SqlCommand(x, connect.get());
+            SqlDataReader read = com.ExecuteReader();
+            List<Leagues> list = new List<Leagues>();
+            while (read.Read())
+            {
+                list.Add(new Leagues() {LeagueID=Convert.ToInt32(read[0]),LeagueName=read[1].ToString() });
+            }
+            read.Close();
+            return list;
+
+        }
+
+        }
 }

@@ -149,6 +149,7 @@
     <Content Include="logout.aspx" />
     <Content Include="LeaguesCreater.aspx" />
     <Content Include="Teamadder.aspx" />
+    <Content Include="Announce.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="Teamadder.aspx.designer.cs">
       <DependentUpon>Teamadder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Announce.aspx.cs">
+      <DependentUpon>Announce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announce.aspx.designer.cs">
+      <DependentUpon>Announce.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

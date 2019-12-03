@@ -4,16 +4,32 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form runat="server">
-        LeagueName:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
-        StartDate:
-        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-        EndDate:
-        <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-        Tournaments:
-        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList><br />
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
 
-    </form>
+    <div class="container">
+        <div>
+            <h1>Enter League Information</h1><br>
+            <form class="col-md-6" runat="server">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" runat="server" id="leaguename" aria-describedby="emailHelp"
+                        placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="startdate">Start Date</label>
+                    <input type="date" class="form-control" runat="server" id="startdate" required>
+                </div>
+                <div class="form-group">
+                    <label for="enddate">End Date</label>
+                    <input type="date" class="form-control" runat="server" id="enddate" required>
+                </div>
+                <div class="form-group">
+                <label for="labelforselecttournament">Tournament</label>
+                 <asp:DropDownList ID="DropDownList2" class="form-control" runat="server"></asp:DropDownList>
+                </div>
+                <asp:Button ID="Button2" runat="server" Text="submit" class="btn btn-primary" OnClick="Button1_Click" />
+            </form>
+        </div>
+        <br><br><br>
+    </div>
+
 </asp:Content>
