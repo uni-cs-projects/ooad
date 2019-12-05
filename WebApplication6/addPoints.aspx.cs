@@ -12,7 +12,7 @@ namespace WebApplication6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            foreach (var item in new ManagerMatches().getMatch())
+            foreach (var item in new ManagerMatches().getMatchList())
             {
                 dl.Items.Add(new ListItem(item.matchname,item.matchid.ToString()));
             }

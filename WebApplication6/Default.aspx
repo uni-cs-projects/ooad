@@ -2,5 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <img src="screenshots/fan1.PNG" class="rounded mx-auto d-block mt-3">
+   <a href="login.aspx"> <img src="screenshots/fan1.PNG" class="rounded mx-auto d-block mt-3"></a>
+    <br>
+    <br>
+    <br>
+    <br>
 </asp:Content>

@@ -151,6 +151,7 @@
     <Content Include="Teamadder.aspx" />
     <Content Include="Announce.aspx" />
     <Content Include="addPoints.aspx" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,7 +177,6 @@
   <ItemGroup>
     <Compile Include="connect.cs" />
     <Compile Include="Control\AddUser.cs" />
-    <Compile Include="Control\editTeams.cs" />
     <Compile Include="Control\GanerateAnnoucements.cs" />
     <Compile Include="Control\LeaguesManager.cs" />
     <Compile Include="Control\LeaguesSelector.cs" />
@@ -185,7 +185,6 @@
     <Compile Include="Control\PlayersManager.cs" />
     <Compile Include="Control\PointsAdder.cs" />
     <Compile Include="Control\SearchTeam.cs" />
-    <Compile Include="Control\SelectTeam.cs" />
     <Compile Include="Control\ShowAnnoucements.cs" />
     <Compile Include="Control\ShowLeagues.cs" />
     <Compile Include="Control\VerifyUser.cs" />

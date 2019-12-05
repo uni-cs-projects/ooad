@@ -19,5 +19,9 @@ namespace WebApplication6.Control
             a.userid = uid;
             return a.getJoinLeagues();
         }
+
+        public void sendInvite(int sid,int rid,int lid) {
+            new Participants().invite(sid, rid, lid);
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace WebApplication6.Control
 {
     public class ManagerMatches
     {
-        public List<Matches> getMatch() {
+        public List<Matches> getMatchList() {
             return new Matches().getMatch();
         }
     }

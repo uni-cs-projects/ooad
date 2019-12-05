@@ -57,6 +57,12 @@ namespace WebApplication6.Entity
             }
             return list;
         }
+
+        public void invite(int senderid,int receiverid,int leagueid) {
+            SqlCommand a = new SqlCommand($"insert into invite values({senderid},{receiverid},{leagueid})",connect.get());
+            a.ExecuteNonQuery();
+
+        }
         }
 
     }
