@@ -1,0 +1,35 @@
+ADAPTER:
+
+ConnectionAdapter
+
+Proxy:
+
+LeagueProxy
+ShowLeagues
+
+Stretegy:
+
+Players
+PlayerSearchBehaviour
+Byteam
+Bytype
+General
+Byteamandtype
+
+
+Factory:
+
+Matches
+Match
+SimpleMatchFaactory
+T20
+Odi
+Test
+
+Singleton:
+
+connectionAdapter
+
+Facade Controller:
+
+All clases in controller folder

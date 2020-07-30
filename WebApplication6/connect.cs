@@ -10,14 +10,7 @@ namespace WebApplication6
     {
         public static SqlConnection ab;
         public static SqlConnection get() {
-            if (ab == null)
-            {
-                ab = new SqlConnection();
-                ab.ConnectionString = "Data Source=DESKTOP-O3SH4TA\\SQLEXPRESS;Initial Catalog=FantasyLeagueDB;Integrated Security=True;";
-                ab.Open();
-
-            }
-            return ab;
+            return new ConnectionAdapter().createConnection(ab);
         }
     }
 }

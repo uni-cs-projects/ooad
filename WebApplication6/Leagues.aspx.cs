@@ -14,20 +14,48 @@ namespace WebApplication6
         {
             Random a = new Random();
             int i = 1;
-            foreach (var item in new ShowLeagues().listLeague())
+            if (!IsPostBack)
             {
-                
-                leagues.InnerHtml += $@"<tr class=""click-row"" data-href=""Manageteams.aspx?lid={item.LeagueID}"">
+                foreach (var item in new ShowLeagues().listLeagueproxy())
+                {
+
+                    leagues.InnerHtml += $@"<tr class=""click-row"" data-href=""Manageteams.aspx?lid={item.LeagueID}"">
                     <th scope =""row"">{i}</th>
  
                      <td>{item.LeagueName}</td>
     
-                        <td>{a.Next(1,100)}+</td>
+                        <td>{a.Next(1, 100)}+</td>
     
                     </tr>";
-                i++;
+                    i++;
+                }
+            }
+            else
+            {
+                leagues.InnerHtml = "";
+                foreach (var item in new ShowLeagues().listLeague())
+                {
+
+                    leagues.InnerHtml += $@"<tr class=""click-row"" data-href=""Manageteams.aspx?lid={item.LeagueID}"">
+                    <th scope =""row"">{i}</th>
+ 
+                     <td>{item.LeagueName}</td>
+    
+                        <td>{a.Next(1, 100)}+</td>
+    
+                    </tr>";
+                    i++;
+                }
+
             }
            
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+
+
         }
     }
 }

@@ -16,36 +16,28 @@ namespace WebApplication6.Entity
         public object SqlComman { get; private set; }
         public string playerhand { get; set; }
 
-        public List<Players> getPlayers() {
-            string x = "";
-            if(Teamid == 0 && playerType == 0)
+        public List<Players> getPlayers() {   //Strategy
+            PlayerSearchBehaviour obj;
+            if (Teamid == 0 && playerType == 0)
             {
-                x = "select * from Player";
+                obj = new General();  
             }
             else if (Teamid == 0)
             {
-                x = $"select * from Player where PlayerType={playerType}";
+                obj = new Bytype();
             }
             else if (playerType == 0)
             {
-                x = $"select * from Player where TeamID={Teamid}";
+                obj = new Byteam();
             }
             else
             {
-                x = $"select * from Player where TeamID={Teamid} and PlayerType={playerType}";
+                obj = new ByTeamandType();
             }
-            List<Players> list = new List<Players>();
-            SqlCommand com = new SqlCommand(x,connect.get());
-            SqlDataReader reader = com.ExecuteReader();
-            while (reader.Read())
-            {
-                list.Add(new Players() { playerid = Convert.ToInt32(reader[0]),Teamid=Convert.ToInt32(reader[1]),playerName=reader[2].ToString(),playerType=Convert.ToInt32(reader[3]),playerhand=reader[4].ToString() });
-            }
-            reader.Close();
-            return list;
+            return obj.getPlayers(Teamid, playerid);
         }
 
-        public List<Players> getPlayertype()
+        public List<Players> getPlayertype() 
         {
             string x = "select * from PlayerType";
        

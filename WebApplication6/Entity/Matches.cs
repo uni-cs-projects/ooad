@@ -11,18 +11,22 @@ namespace WebApplication6.Entity
         public int matchid { get; set; }
         public string matchname { get; set; }
 
+        public SimpleMatchFactory obj;
 
-        public List<Matches> getMatch() {
-            string x = "select a.MatchID,b.TypeName from Matches a,MatchType b where a.MatchType = b.TypeID";
-            SqlCommand a = new SqlCommand(x, connect.get());
-            List<Matches> list = new List<Matches>();
-            SqlDataReader reader = a.ExecuteReader();
-            while (reader.Read())
-            {
-                list.Add(new Matches() {matchid=Convert.ToInt32(reader[0]),matchname= reader[1].ToString() });
-            }
-            reader.Close();
-            return list;
+        public Matches(SimpleMatchFactory obj)
+        {
+            this.obj = obj;
+        }
+
+        public Matches()
+        {
+        }
+
+
+        public List<Matches> getMatch(string type) {
+            Match match;
+            match = obj.getMatch(type);
+            return match.getMatch();
         }
     }
 }

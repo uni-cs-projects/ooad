@@ -12,5 +12,11 @@ namespace WebApplication6.Control
             Leagues items = new Leagues();
             return items.showLeagues();
         }
+
+        public List<Leagues> listLeagueproxy()
+        {
+            LeaguesProxy items = new LeaguesProxy();
+            return items.showLeagues();
+        }
     }
 }

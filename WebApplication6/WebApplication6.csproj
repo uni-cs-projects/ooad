@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -176,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connect.cs" />
+    <Compile Include="ConnectionAdapter.cs" />
     <Compile Include="Control\AddUser.cs" />
     <Compile Include="Control\GanerateAnnoucements.cs" />
     <Compile Include="Control\LeaguesManager.cs" />
@@ -189,12 +191,23 @@
     <Compile Include="Control\ShowLeagues.cs" />
     <Compile Include="Control\VerifyUser.cs" />
     <Compile Include="Entity\Annoucements.cs" />
+    <Compile Include="Entity\Byteam.cs" />
+    <Compile Include="Entity\ByTeamandType.cs" />
+    <Compile Include="Entity\Bytype.cs" />
+    <Compile Include="Entity\General.cs" />
     <Compile Include="Entity\Leagues.cs" />
+    <Compile Include="Entity\LeaguesProxy.cs" />
+    <Compile Include="Entity\Match.cs" />
     <Compile Include="Entity\Matches.cs" />
+    <Compile Include="Entity\Odi.cs" />
     <Compile Include="Entity\Participants.cs" />
     <Compile Include="Entity\Players.cs" />
+    <Compile Include="Entity\PlayerSearchBehaviour.cs" />
     <Compile Include="Entity\Points.cs" />
+    <Compile Include="Entity\SimpleMatchFactory.cs" />
+    <Compile Include="Entity\T20.cs" />
     <Compile Include="Entity\Teams.cs" />
+    <Compile Include="Entity\Test.cs" />
     <Compile Include="Entity\Tounaments.cs" />
     <Compile Include="Entity\Users.cs" />
     <Compile Include="Global.asax.cs">

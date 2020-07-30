@@ -9,7 +9,8 @@ namespace WebApplication6.Control
     public class ManagerMatches
     {
         public List<Matches> getMatchList() {
-            return new Matches().getMatch();
+            SimpleMatchFactory ab = new SimpleMatchFactory();
+            return new Matches(ab).getMatch("T20"); // factory
         }
     }
 }

@@ -26,7 +26,7 @@ namespace WebApplication6.Entity
             a.ExecuteNonQuery();
         }
 
-        public List<Leagues> showLeagues() {
+        public List<Leagues> showLeagues() { //proxy
             string x = "";
             if (userid == 0)
             {
